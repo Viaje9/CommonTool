@@ -1,9 +1,9 @@
-# 常用的方法
+# Commonly used methods
 
-這邊存放一些常用的JS方法，方便日後查詢。
+Here are some commonly used JavaScript methods for easy reference in the future.
 
-分類為node常用與瀏覽器常用。
+Classified into commonly used for Node.js and commonly used for browsers.
 
-## 須知
+## Notice
 
-1. node 使用 ES Modules，使用套件時要注意是否支援 ES Modules。
+1. Here, Node.js uses ES Modules, so when using packages, it's important to check if they support ES Modules.
