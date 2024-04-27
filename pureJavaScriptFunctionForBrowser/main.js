@@ -1,5 +1,5 @@
 /**
- * 檔名先暫設為 main.js
- * 日後依照功能再做調整
+ * Temporarily set the filename to main.js
+ * Later, categorize the filenames according to their functions.
  */
 
