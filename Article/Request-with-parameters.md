@@ -24,6 +24,14 @@ GET /detail/123
 GET /detail/456
 ```
 
+```javascript
+// Browser Fetch API
+const id = 123
+fetch(`/detail/${id}`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+```
+
 #### Query Parameters
 
 Query Parameters 傳遞參數，這些參數會被放在 URL 的後面，並且以 `?` 開頭，參數之間以 `&` 連接。
@@ -34,6 +42,18 @@ e.g.
 ```http
 GET /search?keyword=apple
 GET /search?keyword=apple&category=fruit
+```
+
+```javascript
+// Browser Fetch API
+const params = new URLSearchParams()
+params.append('keyword', 'apple')
+params.append('category', 'fruit')
+  
+fetch(`/search?${params.toString()}`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+
 ```
 
 ### POST
@@ -52,4 +72,20 @@ Content-Type: application/json
   "name": "John",
   "age": 18
 }
+```
+
+```javascript
+// Browser Fetch API
+fetch('/api/user', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'John',
+    age: 18
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
 ```
