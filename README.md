@@ -4,6 +4,9 @@ Here are some commonly used JavaScript methods for easy reference in the future.
 
 Classified into commonly used for Node.js and commonly used for browsers.
 
-## Notice
+## Category
 
-1. Here, Node.js uses ES Modules, so when using packages, it's important to check if they support ES Modules.
+1. [Article](./article/README.md)
+2. [Node Utils](./nodeUtils/README.md)
+3. [Pure JavaScript Function For Browser](./pureJavaScriptFunctionForBrowser/README.md)
+4. [CI/CD](./CICD/README.md)
