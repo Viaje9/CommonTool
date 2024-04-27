@@ -1,0 +1,33 @@
+name: build and deploy
+
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.19.0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run buildProd
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          token: '${{ secrets.GITHUB_TOKEN }}'
